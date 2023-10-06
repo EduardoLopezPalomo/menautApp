@@ -5,6 +5,7 @@ const cors = require("cors");
 const passport = require("passport");
 const mongoose = require("mongoose");
 const config = require("./config/database");
+const session = require("express-session");
 
 mongoose.connect(config.database);
 mongoose.connection.on("connected",()=>{
@@ -25,6 +26,17 @@ app.use(express.static(path.join(__dirname,"public")));
 
 //body parser middleware
 app.use(bodyParser.json());
+
+app.use(session({
+    secret: 'yoursecret',
+    resave: false,
+    saveUninitialized: false,
+    cookie: { secure: true }
+}))
+app.use(passport.initialize());
+app.use(passport.session());
+
+require("./config/passport")(passport);
 
 app.use("/users",users);
 

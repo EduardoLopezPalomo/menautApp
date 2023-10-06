@@ -1,0 +1,57 @@
+/* Navbar styles */
+.navbar {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Navbar header styles */
+  .navbar-header {
+    padding: 15px;
+  }
+  
+  /* Navbar brand styles */
+  .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Navbar toggle button styles */
+  .navbar-toggle {
+    background-color: transparent;
+    border: none;
+  }
+  
+  /* Navbar toggle icon styles */
+  .icon-bar {
+    background-color: #fff;
+  }
+  
+  /* Navbar menu container styles */
+  #navbar {
+    background-color: #333;
+  }
+  
+  /* Navbar menu list styles */
+  .navbar-nav {
+    margin-top: 10px;
+  }
+  
+  /* Navbar menu item styles */
+  .navbar-nav li {
+    margin-right: 10px;
+  }
+  
+  /* Navbar menu link styles */
+  .navbar-nav li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Active link styles */
+  .navbar-nav li.active a {
+    font-weight: bold;
+  }
+  
+  
