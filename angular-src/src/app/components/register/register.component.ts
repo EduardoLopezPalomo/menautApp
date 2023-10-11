@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ValidateService } from 'src/app/services/validate.service';
 import { ToastrService } from 'ngx-toastr';
+import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -13,7 +15,11 @@ export class RegisterComponent implements OnInit{
   email!: string;
   password!: string;
 
-  constructor(private validateService: ValidateService, private toastr: ToastrService){}
+  constructor(
+    private validateService: ValidateService, 
+    private toastr: ToastrService,
+    private authService: AuthService,
+    private router: Router ){}
 
   ngOnInit(): void {
     
@@ -34,7 +40,16 @@ export class RegisterComponent implements OnInit{
     this.toastr.error("use a valid email")
     return false;
   }
-  this.toastr.success("The user is registered")
+  this.authService.registerUser(user).subscribe(data =>{
+    console.log("hola")
+    if(data.success){
+      this.toastr.success("The user is registered")
+      this.router.navigate(['/login'])
+    }else{
+      this.toastr.success("Something went wrong")
+      this.router.navigate(['/register'])
+    }
+  })
   return true;
  }
 }
