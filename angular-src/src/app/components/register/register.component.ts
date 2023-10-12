@@ -41,12 +41,11 @@ export class RegisterComponent implements OnInit{
     return false;
   }
   this.authService.registerUser(user).subscribe(data =>{
-    console.log("hola")
     if(data.success){
       this.toastr.success("The user is registered")
       this.router.navigate(['/login'])
     }else{
-      this.toastr.success("Something went wrong")
+      this.toastr.error("Something went wrong")
       this.router.navigate(['/register'])
     }
   })
