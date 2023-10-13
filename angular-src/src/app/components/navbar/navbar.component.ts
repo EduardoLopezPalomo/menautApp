@@ -11,7 +11,7 @@ import { ToastrService } from 'ngx-toastr';
 export class NavbarComponent {
 
   constructor(
-    private authService: AuthService,
+    public authService: AuthService,
     private router: Router,
     private toastr: ToastrService
   ){}

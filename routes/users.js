@@ -64,9 +64,17 @@ router.post("/authenticate",(req,res,next)=>{
     });
 });
 
-router.get("/profile",(req,res,next)=>{
-    res.send("profile");
-});
+router.get('/profile', (req, res, next) => {
+    const username = req.body.username;
+    User.getUserByUsername(username)
+     .then(user => {
+        res.json({user: user});
+    })
+    .catch(error => {
+        // Handle errors here
+        res.json({success:false , msg:"There is no username"})
+    });
+  });
 
 
 

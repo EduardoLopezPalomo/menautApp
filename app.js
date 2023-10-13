@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname,"public")));
 app.use(bodyParser.json());
 
 app.use(session({
-    secret: 'yoursecret',
+    secret: config.secret,
     resave: false,
     saveUninitialized: false,
     cookie: { secure: true }
@@ -42,6 +42,10 @@ app.use("/users",users);
 
 app.get("/",(req, res)=>{
     res.send("invalid endpoint");
+})
+
+app.get("*",(req, res)=>{
+    res.sendFile(path.join(__dirname,"public/index.html"));
 })
 
 app.listen(port,()=>{
