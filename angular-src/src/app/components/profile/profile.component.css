@@ -1,0 +1,32 @@
+.page-header {
+    text-align: center;
+    color: #7300ff; 
+    font-size: 28px; 
+    margin-top: 50px;
+  }
+  
+  .list-group {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .list-group-item {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px; 
+    background-color: #f9f9f9; 
+  }
+  
+  .list-group-item strong {
+    font-weight: bold;
+  }
+  
+  .page-header {
+    text-align: center;
+    color: #7300ff; 
+    font-size: 28px; 
+  }
+  

@@ -29,7 +29,7 @@ export class AuthService {
   registerUser(user:any){
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/users/register', user, {headers:headers}).pipe(
+    return this.http.post('users/register', user, {headers:headers}).pipe(
       map((res:any)=>{
         return res;
       })
@@ -39,7 +39,7 @@ export class AuthService {
   autheticateUser(user:any){
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/users/authenticate', user, {headers:headers}).pipe(
+    return this.http.post('users/authenticate', user, {headers:headers}).pipe(
       map((res:any)=>{
         return res;
       })
