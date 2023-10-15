@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "MEAN authentication app",
   "main": "app.js",
+  "homepage": "https://EduardoLopezPalomo.github.io/menautApp",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app"
+    "start": "node app",
+    "deploy": "gh-pages -d menautApp"
   },
   "dependencies": {
     "@types/passport-jwt": "^3.0.10",
@@ -14,6 +16,7 @@
     "cors": "2.8.5",
     "express": "4.18.2",
     "express-session": "^1.17.3",
+    "gh-pages": "^6.0.0",
     "jsonwebtoken": "9.0.2",
     "mongoose": "7.5.3",
     "passport": "0.6.0",
