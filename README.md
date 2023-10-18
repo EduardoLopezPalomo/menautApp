@@ -9,3 +9,5 @@ If in the register page the email has an invalid format, you wont be able to reg
 
 For running the web you have to open the project you have to open it in local because the deployment in Heroku needs to be paying.
 If you have it in local, just dowload the dependencies writing in the terminal npm install. Then you just write nodemon in the terminal and the app should be working.
+
+To see the web you type in google http://localhost:8080/ or the number that port shows in the terminal 
